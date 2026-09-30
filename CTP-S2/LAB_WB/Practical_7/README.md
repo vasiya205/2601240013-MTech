@@ -1,20 +1,20 @@
-# Student/Employee Data Model: Dataclass vs Traditional Class
+# Producer-Consumer Application using Threading
 
 ## Objective
-To implement an employee data model using both traditional Python classes and modern `@dataclass` structures, evaluating differences in syntax overhead, maintainability, and memory consumption.
+To develop a concurrent Producer-Consumer application in Python using threading modules and thread-safe synchronization primitives.
 
 ## Algorithm
-1. Create a traditional Python class with manual constructor and string representation methods.
-2. Create an equivalent dataclass utilizing the `@dataclass` decorator and explicit type annotations.
-3. Instantiate both models with sample record data.
-4. Measure memory usage via `sys.getsizeof()`.
+1. Initialize a bounded thread-safe queue as a shared buffer.
+2. Define producer tasks to generate and enqueue items.
+3. Define consumer tasks to dequeue and process items.
+4. Start concurrent threads and synchronize completion using `.join()`.
 
 ## Input
-* Employee details: ID (`101`), Name (`"Alice Smith"`), Department (`"Cybersecurity"`), Salary (`75000.0`).
+* Shared buffer size limit (`maxsize=5`) and iteration count (`3` items per thread).
 
 ## Output
-* Printed string representations and memory size comparisons for both implementations.
+* Printed production and consumption logs verifying thread-safe item processing.
 
 ## Time & Space Complexity
-* **Time Complexity**: $O(1)$ for object creation and attribute access.
-* **Space Complexity**: $O(1)$ constant auxiliary memory per instance.
+* **Time Complexity**: O(N) where $N$ is the total number of items produced and consumed.
+* **Space Complexity**: O(B) where $B$ is the maximum capacity of the queue buffer.
