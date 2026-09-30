@@ -1,23 +1,20 @@
-# Asynchronous Web Crawler vs Sequential Implementation
+# Comprehensive Unit and Integration Testing with Pytest and Hypothesis
 
 ## Objective
-To develop an asynchronous web crawler using `asyncio` and `aiohttp` to perform non-blocking concurrent network requests and compare its execution performance against a sequential implementation[cite: 3, 33].
+To write robust unit and property-based integration tests for a Python application using `pytest` and `hypothesis` to check edge cases and logical correctness[cite: 3, 37].
 
 ## Algorithm
-1. Import `asyncio`, `aiohttp`, and `time` modules.
-2. Define a sequential crawler function for blocking requests.
-3. Define an asynchronous crawler function using `asyncio.gather` for concurrent fetching[cite: 3, 33].
-4. Implement retry mechanisms and exception handling for network requests.
-5. Run both implementations and compare total execution times.
+1. Define a core mathematical or logical function with error bounds.
+2. Implement standard unit tests covering base cases and exception raising using `pytest`.
+3. Implement property-based tests utilizing `hypothesis` decorators to check invariants across diverse randomized inputs.
+4. Run the test suite and verify coverage.
 
 ## Input
-* A list of target URLs (`https://example.com/page0` to `page2`).
+* Target numbers and ranges generated via Hypothesis strategies (`st.floats`) and fixed edge case inputs (`4.0`, `-1.5`, `0.0`).
 
 ## Output
-* Crawled data results and execution runtime durations for both asynchronous and sequential approaches.
+* Test session execution logs demonstrating successful unit and property-based test assertions.
 
 ## Time & Space Complexity
-* **Time Complexity**: 
-  * *Sequential*: $O(N \times T)$ where $N$ is URLs and $T$ is request delay.
-  * *Asynchronous*: $O(T)$ bounded by the longest individual request.
-* **Space Complexity**: $O(N)$ to store the result collection list.
+* **Time Complexity**: O(K) where $K$ is the number of test cases executed by Pytest and Hypothesis.
+* **Space Complexity**: O(1) auxiliary workspace per individual test execution.
