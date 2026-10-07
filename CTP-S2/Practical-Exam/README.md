@@ -33,7 +33,8 @@ The Stack follows the LIFO (Last In, First Out) principle and is used to maintai
 12)Process requests and store them in the Stack.
 13)Display the front request and recently processed request.
 
-(4) SAMPLE OUTPUT: 
+(4) SAMPLE OUTPUT:
+
 Front Request: CustomerRequest(request_id=1, customer_name='Vasi', issue='Password Reset')
 
 Recently Processed: CustomerRequest(request_id=2, customer_name='Mahee', issue='Payment Issue')
